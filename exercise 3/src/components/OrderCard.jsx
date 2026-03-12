@@ -12,7 +12,7 @@ export default function OrderCard({ order, handleIncrease, handleDecrease }) {
 
       <div className="order-quantity">
         <div
-          className="order-button"
+          className={`order-button ${order.quantity<= 0 ? "disable" : ""}`}
           onClick={() => handleDecrease(order.product)}
         >
           -
